@@ -457,6 +457,7 @@ nav:
           - System-wide: system-administration/system-settings/system-wide.md
   - Use cases:
       - use-cases/index.md
+      - LDAP sync and a name change upon marriage: use-cases/name-change-upon-marriage.md
       - Automated contract term extension: use-cases/automated-contract-term-extension.md
       - Cable patches and paths: use-cases/cable-patches-and-path.md
       - Complex reports: use-cases/complex-reports.md
