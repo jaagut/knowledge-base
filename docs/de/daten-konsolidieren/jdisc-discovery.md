@@ -110,14 +110,17 @@ Für jeden Typ in JDisc kann ein äquivalenter Objekttyp in i-doit ausgewählt w
 
 Kategorien die für JDisc erstellt wurden sind:
 
--   [Support Entitlements]()
--   [Custom Identifier]()
--   [JDisc Custom Attributes]()
--   [JDisc Discovery]()
--   [Netzwerk > Verbindungs Endpunkte]()
--   [Zugewiesene Abonnente]()
+-   [Support Entitlements](../grundlagen/kategorien-und-attribute.md)
+-   [Custom Identifier](../grundlagen/kategorien-und-attribute.md)
+-   [JDisc Custom Attributes](../grundlagen/kategorien-und-attribute.md)
+-   [JDisc Discovery](../grundlagen/kategorien-und-attribute.md)
+-   [Netzwerk > Verbindungs Endpunkte](../grundlagen/kategorien-und-attribute.md)
+-   [Zugewiesene Abonnente](../grundlagen/kategorien-und-attribute.md)
 
 ### Custom identifier
+
+!!! attention "Matching Regel"
+    Die `devideid` wird immer für die Identifizierung von Objekten verwendet, wenn vorhanden.
 
 JDisc device ids sollen bei Anlage des Objekts in der **Custom identifier** Kategorie mit type JDisc zugeordnet werden. Hierher sollen die Objekte im nach hinein dann auch identifiziert werden.
 Wenn keine Daten vorhanden sind wird auf das Objekt-Matching Profil zurück gegriffen.
@@ -128,30 +131,26 @@ Der Import von Inhalten aus JDisc erfolgt über **Extras → CMDB → Import →
 
 [![JDisc Import GUI](../assets/images/de/daten-konsolidieren/jdisc/3-jdisc.png)](../assets/images/de/daten-konsolidieren/jdisc/3-jdisc.png)
 
-Vor dem Ausführen des Imports müssen die Import-Parameter festlegt sein.
-
+Vor dem Ausführen des Imports müssen die Import-Parameter festlegt sein.<br>
 Da es möglich ist, dass mehr als ein JDisc-Server eingesetzt wird, muss im ersten Schritt der JDisc-Server ausgewählt werden. Das Profil, welches zuvor definiert wurde, kann ebenfalls gewählt werden um die importierten Inhalte und deren Handhabung zu beeinflussen. Zusätzlich kann der Modus des Imports angegeben werden. Der Import-Modus **Erstellen** wird alle gefundenen Objekte erstellen, ohne zu prüfen, ob diese bereits existieren. Der Import-Modus **Aktualisieren** wird nur Objekte erstellen, die im i-doit-Datenbestand nicht gefunden werden. Kategorien von bereits existierenden Objekten werden (wenn nötig) um neue Daten ergänzt. Der Import-Modus **Überschreiben** verhält sich im Prinzip wie der Modus **Aktualisieren** mit dem Unterschied, dass Listen-Kategorien erst geleert und dann neu angelegt werden.
 
 | **Import Modus** | **Beschreibung** |
 | --- | --- |
 | **Erstellen** | Der Import-Modus **"Erstellen"** wird alle gefundenen Objekte erstellen, ohne zu prüfen, ob diese bereits existieren. |
 | **Aktualisieren** | Der Import-Modus **"Aktualisieren"** wird nur Objekte erstellen, die in i-doit nicht gefunden werden konnten. Kategorien von bereits existierenden Objekten werden (wenn nötig) um neue Daten ergänzt. |
-| **Aktualisieren (Neu inventarisiert)** | Mit dem Zusatz **"(Neu inventarisiert)"** werden feste idoit-zu-jdisc-device Verknüpfungen verworfen und die Objektzugehörigkeiten neu errechnet. |
+| **Aktualisieren (Neu inventarisiert)** | Mit dem Zusatz **"(Neu inventarisiert)"** wird die `Custom identifier` Kategorie gelöscht und feste idoit-zu-jdisc-device Verknüpfungen verworfen und die Objektzugehörigkeiten neu errechnet. |
 | **Erstelle nur neu gescannte Geräte** | Der Modus "**Erstelle nur neu gescannte Geräte**" erstellt nur Objekte die nicht in i-doit existieren. |
 | **Überschreiben** | Der Import-Modus **"Überschreiben"** verhält sich genauso wie der Modus "Aktualisieren" mit dem Unterschied, das Listen-Kategorien erst geleert und dann neu angelegt werden. |
-| **Überschreiben (Neu inventarisiert)** | Mit dem Zusatz **"(Neu inventarisiert)"** werden feste idoit-zu-jdisc-device Verknüpfungen verworfen und die Objektzugehörigkeiten neu errechnet. |
+| **Überschreiben (Neu inventarisiert)** | Mit dem Zusatz **"(Neu inventarisiert)"** wird die `Custom identifier` Kategorie gelöscht und feste idoit-zu-jdisc-device Verknüpfungen verworfen und die Objektzugehörigkeiten neu errechnet. |
 
-In der Protokollierung kann der Umfang der geschriebenen Logs beeinflusst werden. Ein umfangreicheres Logging erhöht die Dauer des Imports.
-
-Wenn die Einstellungen vollständig vorgenommen wurden, kann der Import über **Importvorgang starten** angestoßen werden. Bitte beachte, dass die Dauer des Imports sowohl von der Größe der JDisc-Datenbank, als auch von der verwendeten Hardware abhängig ist.
-
-Wenn der Import abgeschlossen wurde, wird eine Zusammenfassung im Bereich **Ergebnis** angezeigt.
-
+In der Protokollierung kann der Umfang der geschriebenen Logs beeinflusst werden. Ein umfangreicheres Logging erhöht die Dauer des Imports.<br>
+Wenn die Einstellungen vollständig vorgenommen wurden, kann der Import über **Importvorgang starten** angestoßen werden. Bitte beachte, dass die Dauer des Imports sowohl von der Größe der JDisc-Datenbank, als auch von der verwendeten Hardware abhängig ist.<br>
+Wenn der Import abgeschlossen wurde, wird eine Zusammenfassung im Bereich **Ergebnis** angezeigt.<br>
 Beim Import erzeugte Logs findest du im i-doit-Verzeichnis log/.
 
 ## Import über die i-doit Console
 
-Der Import der Daten aus JDisc nach i-doit ist nicht nur manuell über die Oberfläche möglich. Er kann ebenfalls über die i-doit [Console](../automatisierung-und-integration/cli/console/index.md) ausgeführt und somit automatisiert werden. Wie der entsprechende Aufruf erzeugt wird, finden Sie im [zugehörigen Artikel](../automatisierung-und-integration/cli/console/optionen-und-parameter-der-console.md#import-jdisc) mit einem Beispiel für die Option **import-jdisc**.
+Der Import der Daten aus JDisc nach i-doit ist nicht nur manuell über die Oberfläche möglich. Er kann ebenfalls über die i-doit [Console](../automatisierung-und-integration/cli/console/index.md) ausgeführt und somit **automatisiert** werden. Wie der entsprechende Aufruf erzeugt wird, finden Sie im [zugehörigen Artikel](../automatisierung-und-integration/cli/console/optionen-und-parameter-der-console.md#import-jdisc) mit einem Beispiel für die Option **import-jdisc**.
 
 Für den Import lässt sich die ID des gewünschten Profils angeben. Die ID ist in der Liste der Profile zu finden:
 
@@ -180,7 +179,7 @@ regenerateSearchIndex
 [additional]
 ```
 
-Wenn wir davon ausgehen, dass diese im i-doit root Verzeichnis liegt, dann wird der Import mit der ldap.ini so aufgerufen:
+Aufruf aus dem i-doit Verzeichnis:
 
 ```shell
 sudo -u www-data php console.php import -jdisc -c jdisc.ini
