@@ -88,7 +88,7 @@ Für jeden Typ in JDisc kann ein äquivalenter Objekttyp in i-doit ausgewählt w
 | **Softwarelizenzen beim Import berücksichtigen** | Sollen inventarisierte Softwarelizenzen als Objekttyp **Lizenzen** importiert werden? |
 | **Systemdienste importieren** | Sollen inventarisierte Systemdienste als Objekttyp **Systemdienst** importiert werden? |
 | **Cloud Subscriptionen importieren** | Sollen Daten aus der JDisc Kategorie Cloud importiert werden?<br>Wird in die Kategorie **Zugewiesene Abonnente** importiert. Die Rückwärtige Kategorie **Zugewiesene Benutzer** ist bei Objekten vom Typ Lizenzen zu finden. |
-| **Verbindungs Endpunkte importieren** | Die Verbindungen werden nicht in die Verkabelung, sondern in die Kategorie "Verbindungs Endpunkte" importiert. Das ermöglicht zwischen der manuellen Verkabelung und der automatischen Verkabelung durch JDisc zu unterscheiden. |
+| **Verbindungs Endpunkte importieren** | Die Verbindungen werden nicht in die Verkabelungs Kategorie, sondern in die Kategorie "Verbindungs Endpunkte" importiert. Das ermöglicht zwischen der manuellen Verkabelung und der automatischen Verkabelung durch JDisc zu unterscheiden. |
 | **Einfache Datenbank Modellierung verwenden?** | Soll die neue oder die alte [Datenbanklogik](../anwendungsfaelle/dokumentation-von-datenbanken.md) verwendet werden? |
 | **Layer-3-Netze beim Import berücksichtigen** | Sollen inventarisierte IP-Netze als Objekttyp **Layer-3-Netze** importiert werden? |
 | **IP Adressentypen beibehalten** | Sollen **IPv4 Adressen**, **IPv6 Adressen**, **Loopback Adressen**, **Virtuelle Adressen** importiert werden? |
