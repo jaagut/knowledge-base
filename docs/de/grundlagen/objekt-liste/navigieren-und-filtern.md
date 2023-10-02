@@ -39,13 +39,12 @@ Seit Version 1.17 kann auch nach leeren Werten gefiltert werden. Dazu muss eine 
 
 Die Objekt-Liste kann bereits beim Laden [gefiltert](listenansicht-konfigurieren.md) werden.
 
-Weitere Funktionen
-------------------
+## Weitere Funktionen
 
 Über die Navigations- und Filterleiste sind weitere Funktionen zugänglich:
 
 |   Button  |   Funktion  |
 | --- | --- |
-| [![](../../assets/images/de/grundlagen/navigation-und-filtern/4-nuf.png)](../../assets/images/de/grundlagen/navigation-und-filtern/4-nuf.png) | Die Objekt-Liste wird neu geladen |
-| [![](../../assets/images/de/grundlagen/navigation-und-filtern/5-nuf.png)](../../assets/images/de/grundlagen/navigation-und-filtern/5-nuf.png) | Die Spaltenbreiten werden automatisch festgelegt. Die Spalten lassen sich andernfalls pro Benutzer in der Breite variieren. |
-| [![](../../assets/images/de/grundlagen/navigation-und-filtern/6-nuf.png)](../../assets/images/de/grundlagen/navigation-und-filtern/6-nuf.png) | [Listenansicht konfigurieren](listenansicht-konfigurieren.md) |
+| [![full](../../assets/images/de/grundlagen/listenansicht-konfigurieren/fullscreen-window-filled.svg)](../../assets/images/de/grundlagen/listenansicht-konfigurieren/fullscreen-window-filled.svg) | Die spaltenbreiten werden an die Fenstergröße angepasst |
+| [![separator](../../assets/images/de/grundlagen/listenansicht-konfigurieren/separator-vertical-filled.svg)](../../assets/images/de/grundlagen/listenansicht-konfigurieren/separator-vertical-filled.svg) | Die Spaltenbreiten auf den standard zurück gesetzt. |
+| [![Gear](../../assets/images/de/grundlagen/listenansicht-konfigurieren/gear.svg)](../../assets/images/de/grundlagen/listenansicht-konfigurieren/gear.svg) | [Listenansicht konfigurieren](listenansicht-konfigurieren.md) |

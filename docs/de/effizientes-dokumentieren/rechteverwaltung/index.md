@@ -66,12 +66,12 @@ Ein Klick auf den Button **Neues Recht** fügt am Ende der Tabelle eine neue Zei
 Sind alle Rechte wie gewünscht konfiguriert, sollten diese über den Button **Speichern** scharf geschaltet werden.
 
 !!! warning "Cache erneuern"
-    Unter Umständen kann es vorkommen, dass Rechte nicht sofort greifen, beispielsweise weil die betroffenen Benutzer noch angemeldet sind. Um die neuen Rechte zu forcieren, muss der Rechte-Cache erneuert werden. Dies geschieht unter **Verwaltung → Systemtools → Cache / Datenbank → Cache → Rechtesystem Cache leeren**. Zudem ist es empfehlenswert, den Cache [automatisch regelmäßig per Cronjob](../../automatisierung-und-integration/cli/index.md) zu erneuern.
+    Unter Umständen kann es vorkommen, dass Rechte nicht sofort greifen, beispielsweise weil die betroffenen Benutzer noch angemeldet sind. Um die neuen Rechte zu forcieren, muss der Rechte-Cache erneuert werden. Dies geschieht unter **Verwaltung → [Mandanten-Name] Verwaltung → Systemreparatur und Bereinigung → Cache / Datenbank → Rechtesystem Cache leeren**. Zudem ist es empfehlenswert, den Cache [automatisch regelmäßig per Cronjob](../../automatisierung-und-integration/cli/index.md) zu erneuern.
 
 Module
 ------
 
-Damit die Rechteverwaltung nicht zu unübersichtlich wird, sind alle Rechte in Module aufgeteilt. Zu finden sind die Module unter **Verwaltung → Rechtesystem → Rechtevergabe**.
+Damit die Rechteverwaltung nicht zu unübersichtlich wird, sind alle Rechte in Module aufgeteilt. Zu finden sind die Module unter **Verwaltung → Berechtigungen → Rechtevergabe**.
 
 *   **Analyse**
 *   **Benachrichtigungen**
@@ -100,7 +100,7 @@ Damit die Rechteverwaltung nicht zu unübersichtlich wird, sind alle Rechte in M
 Rechte wiederherstellen
 -----------------------
 
-Über die **Verwaltung → Rechtesystem → Rechtesystem zurücksetzen** kann man für dem Benutzer, mit dem man derzeit angemeldet ist, alle Rechte zuordnen. Das heißt, dem Personenobjekt des Benutzers werden alle zur Verfügung stehenden Rechte zugeordnet. Um dies zu aktivieren, müssen die Credentials für das [Admin Center](../../administration/admin-center.md) eingegeben werden.
+Über die **Verwaltung → Berechtigungen → Rechtesystemfehler lösen** kann man für dem Benutzer, mit dem man derzeit angemeldet ist, alle Rechte zuordnen. Das heißt, dem Personenobjekt des Benutzers werden alle zur Verfügung stehenden Rechte zugeordnet. Um dies zu aktivieren, müssen die Credentials für das [Admin Center](../../administration/admin-center.md) eingegeben werden.
 
 Rechteverwaltung deaktivieren
 -----------------------------
