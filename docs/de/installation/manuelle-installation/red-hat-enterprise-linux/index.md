@@ -294,9 +294,9 @@ DocumentRoot /var/www/html
     <IfModule mod_rewrite.c>
         RewriteEngine On
         RewriteRule favicon\.ico$ images/favicon.ico [L]
-        RewriteCond %{REQUEST_FILENAME} !-l
-        RewriteCond %{REQUEST_FILENAME} !-f
-        RewriteCond %{REQUEST_FILENAME} !-d
+        RewriteCond /var/www/html%{REQUEST_FILENAME} !-l
+        RewriteCond /var/www/html%{REQUEST_FILENAME} !-f
+        RewriteCond /var/www/html%{REQUEST_FILENAME} !-d
         RewriteRule .* i-doit/index.php [L,QSA]
     </IfModule>
 
