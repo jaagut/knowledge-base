@@ -172,7 +172,7 @@ sudo nano /etc/httpd/conf.d/i-doit.conf
 Diese Datei erhält folgenden Inhalt:
 <!-- cSpell:disable -->
 ```ini
-DirectoryIndex index.php
+DirectoryIndex i-doit/index.php
 DocumentRoot /var/www/html
 
 <Directory /var/www/html>
@@ -201,8 +201,8 @@ DocumentRoot /var/www/html
     Options -Indexes +SymLinksIfOwnerMatch
 
     <IfModule mod_authz_core.c>
-        RewriteCond %{REQUEST_METHOD}  =GET
-        RewriteRule "^$" "/index.php"
+        RewriteCond %{REQUEST_METHOD} =GET
+        RewriteRule "^$" "i-doit/index.php"
 
         ## Deny access to meta files:
         <Files "*.yml">
@@ -262,12 +262,12 @@ DocumentRoot /var/www/html
 
     ## Deny access to some directories:
     <IfModule mod_alias.c>
-        RedirectMatch 403 /imports/.*$
-        RedirectMatch 403 /log/.*$
-        RedirectMatch 403 /temp/.*(?<!\.(css|xsl))$
-        RedirectMatch 403 /upload/files/.*$
-        RedirectMatch 403 /upload/images/.*$
-        RedirectMatch 403 /vendor/.*$
+        RedirectMatch 403 i-doit/imports/.*$
+        RedirectMatch 403 i-doit/log/.*$
+        RedirectMatch 403 i-doit/temp/.*(?<!\.(css|xsl))$
+        RedirectMatch 403 i-doit/upload/files/.*$
+        RedirectMatch 403 i-doit/upload/images/.*$
+        RedirectMatch 403 i-doit/vendor/.*$
     </IfModule>
 
     ## Cache static files:
@@ -297,7 +297,7 @@ DocumentRoot /var/www/html
         RewriteCond %{REQUEST_FILENAME} !-l
         RewriteCond %{REQUEST_FILENAME} !-f
         RewriteCond %{REQUEST_FILENAME} !-d
-        RewriteRule .* index.php [L,QSA]
+        RewriteRule .* i-doit/index.php [L,QSA]
     </IfModule>
 
     ## Deny access to all ini files…
